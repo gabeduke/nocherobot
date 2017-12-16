@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nocherobot:
+    build: dukeman/nocherbot
+    container_name: nocherobot
+    volumes:
+      - hangoutsbot-data:/etc/hangoutsbot
+
+volumes:
+  hangoutsbot-data:
