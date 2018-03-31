@@ -3,7 +3,7 @@ FROM phlak/hangoutsbot:2.8.0
 USER root
 
 RUN apk add --update py-pip
-RUN pip install awscli --upgrade --user
+RUN pip install awscli --upgrade
 
 # Add your custom plugins
 COPY plugins/* /opt/hangoutsbot/hangupsbot/plugins/
