@@ -2,7 +2,7 @@ FROM alpine:3.7 as builder
 MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 
 # Hangoutsbot version
-ARG HOB_VERSION=2.8.0
+ARG HOB_VERSION=3.0
 
 # Create Hangoutsbot directories
 RUN mkdir -p /opt/hangoutsbot /etc/hangoutsbot
@@ -11,7 +11,7 @@ RUN mkdir -p /opt/hangoutsbot /etc/hangoutsbot
 RUN adduser -Ds /sbin/nologin hangoutsbot
 
 # Set Hangoutsbot archive URL
-ARG TARBALL_URL=https://api.github.com/repos/gabeduke/hangoutsbot/tarball/master
+ARG TARBALL_URL=https://api.github.com/repos/gabeduke/hangoutsbot/tarball/v3.0
 
 # Install dependencies, fetch Hangoutsbot archive and chown files
 RUN apk add --update ca-certificates gcc git python3-dev tar tzdata wget \

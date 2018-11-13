@@ -1,11 +1,8 @@
 version: '3'
 services:
   nocherobot:
-    image: dukeman/nocherobot
+    image: dukeman/nocherobot:v2.8.2
     container_name: nocherobot
     volumes:
-      - hangoutsbot-data:/etc/hangoutsbot
+      - ./data:/etc/hangoutsbot
     restart: always
-
-volumes:
-  hangoutsbot-data:
